@@ -1,0 +1,147 @@
+body 
+{
+    display: block;
+    margin: 48px;
+}
+/*editimi i tabeles*/
+.board 
+{
+	border:3px solid black; 
+	display:flex; 
+	flex-wrap:wrap; 
+	height:276px; 
+	width:322px; 
+	background:lightblue; 
+	margin:auto;
+	border-radius:14px;
+	margin-bottom: 8px;
+}
+ /*editimi i brendsise se tabeles*/
+.board div 
+{ 
+	height:40px; 
+	width:40px; 
+	margin:3px;
+	border-radius:20px;
+}
+/*editimi i katrorave veq e veq*/
+.square
+{ 
+	background:white;
+	border-radius: 50%; 
+}
+/*tragon se cila hapsire mbushet*/ 
+.taken 
+{ 
+/*background:red !important */
+}
+/*ngjyra e lojtarit te pare*/ 
+.player-one 
+{ 
+	background:red;
+	border-radius:20px
+}
+/*ngjyra e lojtarit te dyte*/
+.player-two 
+{ 
+	background:black;
+	border-radius:20px
+}
+/*hapesira perreth butonit*/
+.restart
+{ 
+display: none; 
+justify-content: center; 
+align-items: center; 
+flex-direction: column; 
+margin:auto;
+}
+/*editimi i butonit*/
+.playAgain
+{
+	width: 150px;
+  	height:50px;
+  	border-radius:180px;
+  	position:relative;
+  	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  	cursor:pointer;
+  	line-height:12px;
+  	margin: auto;
+}
+.playAgain:before
+{
+	content:'';
+  	z-index:1;
+  	position:absolute;
+  	display:block;
+  	width:80%;
+  	height:70%;
+  	top:15%;
+  	left:10%;
+  	transition: 0.3s opacity ease-in-out;
+  	filter:blur(15px);
+  	opacity:0;
+  	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+.playAgain:hover:before {
+  	opacity:1;
+  	transition: 0.3s opacity ease-in-out;
+  	filter:blur(25px);
+  	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+.playAgain:after
+{
+	content:'Luaj Perseri';
+	font-family:"Courier New",  monospace;
+  	text-align:center;
+  	line-height:40px;
+  	font-size:16px;
+  	color:rgba(235,235,235,1);
+  	font-weight:bold;
+  	z-index:5;
+  	position:absolute;
+  	display:block;
+  	border-radius:180px;
+  	width:92%;
+  	height:80%;
+  	top:10%;
+  	left:4%;  
+  	background-color:rgb(19, 20, 22);
+}
+/*editimi i tekstit te div current player*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.currentPlayer
+{
+	font-family: "Open Sans",  Impact;
+	text-align: center;
+	font-size: 3em;
+ 	color: #fff;
+ 	letter-spacing: 0px;
+	font-weight: 30;
+	text-transform: uppercase;
+  	animation: blur .75s ease-out infinite;
+  	text-shadow: 0px 0px 3px #fff, 0px 0px 5px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 1px #fff,
+      0px 0px 1px #fff, 
+      0px 0px 1px #fff,
+      0px 0px 1px #fff,
+      0px 0px 1px #fff,
+      0px 0px 1px #fff,
+      0px 0px 1px #fff,
+      0px 0px 1px #fff,
+      0px 0px 1px #fff,
+      0px 0px 1px #fff,
+      0px 0px 1px #7B96B8,
+      0px 0px 2px #7B96B8,
+      0px 1px 2px #7B96B8,
+      0px 1px 2px #7B96B8,
+      0px 1px 2px #7B96B8,
+      0px 1px 2px #7B96B8,
+      0px 0px 2px #7B96B8,
+      0px 0px 2px #7B96B8;
+  }
